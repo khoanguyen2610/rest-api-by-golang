@@ -2,8 +2,9 @@ version: '3'
 
 services:
   api:
+    container_name: go-server
     build: ./Docker
     volumes:
-      - ./app:/app
+      - ./app:/etc/go-app/app
     ports:
       - '8080:8080'
