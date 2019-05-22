@@ -62,7 +62,7 @@ func GetNoteHandler(w http.ResponseWriter, r *http.Request) {
 		notes = append(notes, v)
 	}
 
-	res := Response{"success", 200, "Accepted Data2", notes}
+	res := Response{"success", 200, "Accepted Data", notes}
 	temp, _ := json.Marshal(res)
 	w.Write(temp)
 	// vars := mux.Vars(r)
