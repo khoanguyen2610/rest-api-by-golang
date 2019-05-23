@@ -1,31 +1,21 @@
 package main
 
 import (
-	"fmt"
-	"time"
+	// "fmt"
+	"log"
+	"net/http"
+	"user-service/routers"
+	
 )
-
-func pinger(c chan string) {
-	for i := 0; ; i++ {
-		c <- "Ping"
-	}
-}
-
-func printer(c chan string) {
-	for {
-		msg := <-c
-		fmt.Println(msg)
-		time.Sleep(time.Second * 1)
-	}
+func handleRequest() {
+	
+    // finally, instead of passing in nil, we want
+    // to pass in our newly created router as the second
+	// argument
+	// fmt.Printf("%T", routers)
+    log.Fatal(http.ListenAndServe(":8080", routers.InitRouter()))
 }
 
 func main() {
-	var c chan string = make(chan string)
-
-	go func() {
-		c <- "Start channel"
-		fmt.Println("Fired")
-	}()
-	fmt.Println(<-c)
-	fmt.Println("Done")
+	handleRequest()
 }
