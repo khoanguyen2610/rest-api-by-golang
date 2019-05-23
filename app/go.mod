@@ -1,4 +1,4 @@
-module rest-api-new
+module rest-api
 
 go 1.12
 
