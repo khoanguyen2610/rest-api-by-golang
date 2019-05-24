@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5b49565-7ea1-46bd-979b-8a3e51b5a019" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/handlers/user/list.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docker/go-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/go-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docker/go-server/freshRunner.conf" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/go-server/freshRunner.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cmd/http/http.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/configs/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/connections/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/connections/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/app/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/app/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/context.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/user/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/user/delete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/get_all.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/get_one.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/user/get.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/update.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/user/update.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/mysql/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/mysql/base.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/mysql/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/mysql/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/middleware/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/middleware/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -247,11 +224,6 @@
               <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="user-service" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -361,7 +333,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2319688" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4302439" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.14576635" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -636,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
