@@ -1,9 +1,8 @@
 package models
 
 import (
-	"time"
-
 	"github.com/jinzhu/gorm"
+	"time"
 )
 
 type Model interface {
@@ -16,7 +15,7 @@ type BaseModel struct {
 	UpdatedAt time.Time `json:"updatedAt"`
 }
 
-func (m *BaseModel) GetId() init {
+func (m *BaseModel) GetId() int {
 	return m.Id
 }
 
@@ -39,6 +38,6 @@ func (m *BaseModel) BeforeUpdate(scope *gorm.Scope) error {
 	return nil
 }
 
-func (m *BaseModel) RevisionKey() string {
+func (m *BaseModel) RevisionKey() int {
 	return m.Id
 }

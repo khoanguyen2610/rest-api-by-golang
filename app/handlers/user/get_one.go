@@ -1,11 +1,15 @@
-package handlers
+package user
 
 import (
 	"log"
 	"net/http"
 	"strconv"
 
+	"user-service/handlers"
 	"user-service/handlers/response"
+	"user-service/models"
+	"user-service/connections"
+	"user-service/repositories/mysql"
 )
 
 type Article struct {
@@ -23,15 +27,32 @@ var Articles = []Article{
 	Article{Id: 5, Title: "Title 005", Desc: "Description 005", Content: "Content 005"},
 }
 
-func UserGetOne(ctx Context) response.ApiResponse {
+func GetOne(ctx handlers.Context) response.ApiResponse {
 	id := ctx.URLParam("id")
 	key, err := strconv.Atoi(id)
-	if err == nil {
+	if err != nil {
 		log.Print(err)
 	}
 	// Loop over all of our Articles
 	// if the article.Id equals the key we pass in
 	// return the article encoded as JSON
+	mysqlConfig := connections.MysqlConfig{
+		Host:   "localhost",
+		Port:   3306,
+		DbName: "sample_go",
+		User:   "root",
+		Pass:   "123456",
+	}
+	db := connections.ConnectDB(mysqlConfig)
+
+	repo := mysql.NewBaseRepo(db)
+	var u models.User
+	repo.FindById(&u, id)
+	defer db.Close()
+
+	return response.Ok(u)
+
+
 	for _, article := range Articles {
 		if article.Id == key {
 			return response.Ok(article)

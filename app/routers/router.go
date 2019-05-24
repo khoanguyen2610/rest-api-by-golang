@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"user-service/handlers"
+	"user-service/handlers/user"
 	"user-service/routers/middleware"
 
 	"github.com/gorilla/mux"
@@ -62,7 +62,7 @@ func InitRouter() http.Handler {
 	// replace http.HandleFunc with myRouter.HandleFunc
 	myRouter.HandleFunc("/", homePage).Methods("GET")
 	myRouter.HandleFunc("/articles", allArticles).Methods("GET")
-	myRouter.HandleFunc("/articles/{id}", middleware.MakeHandler(handlers.UserGetOne)).Methods("GET")
+	myRouter.HandleFunc("/articles/{id}", middleware.MakeHandler(user.GetOne)).Methods("GET")
 	myRouter.HandleFunc("/articles", allArticles).Methods("POST")
 	return myRouter
 }
