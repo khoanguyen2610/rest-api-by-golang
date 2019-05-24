@@ -5,11 +5,11 @@ import (
 	"log"
 	"net/http"
 	"user-service/routers"
-	
 )
+
 func handleRequest() {
-	fmt.Println("Start listening...")
-    log.Fatal(http.ListenAndServe(":8080", routers.InitRouter()))
+	fmt.Println("Start listening on port :8080")
+	log.Fatal(http.ListenAndServe(":8080", routers.InitRouter()))
 }
 
 func main() {
