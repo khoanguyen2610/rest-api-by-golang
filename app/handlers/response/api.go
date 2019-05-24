@@ -1,6 +1,8 @@
 package response
 
 import (
+	"errors"
+	"github.com/jinzhu/gorm"
 	"net/http"
 )
 
@@ -47,4 +49,11 @@ func ErrorResponse(err error, status int) ApiResponse {
 		StatusCode: status,
 	}
 	return response
+}
+
+func RecordNotFoundError(err error, message string, status int) ApiResponse {
+	if err == gorm.ErrRecordNotFound {
+		return ErrorResponse(errors.New(message), status)
+	}
+	return ErrorResponse(err, http.StatusInternalServerError)
 }

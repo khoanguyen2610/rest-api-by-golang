@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3935e931-08bb-4e16-8f77-9e284e46e429" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/connections/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/connections/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/context.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/user_create.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/user_delete.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/user_get_all.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/user_get_one.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/user/user_update.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/cmd/http/http.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/base.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/user_repo.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/handlers/response/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/response/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/handlers/user/get_one.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/user/get_one.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_build_main_go.exe" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,18 +29,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/connections/mysql.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-              <folding>
-                <element signature="e#21#100#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/repositories/interface.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -59,40 +36,6 @@
               <folding>
                 <element signature="e#22#55#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/base.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="35" />
-              <folding>
-                <element signature="e#16#34#0" expanded="true" />
-                <marker date="1558688605199" expanded="true" signature="296:704" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/handlers/user/get_one.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="57" column="38" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="38" />
-              <folding>
-                <element signature="e#14#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/repositories/mysql/base.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -111,13 +54,55 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/repositories/mysql/user.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#15#133#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routers/middleware/handler.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/handlers/response/render.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/handlers/response/api.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+              <folding>
+                <element signature="e#18#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/handlers/user/get_one.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <element signature="e#14#189#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,6 +138,11 @@
       <find>FindById</find>
       <find>UpdatedAt</find>
       <find>BaseRepo</find>
+      <find>ServeHTTP</find>
+      <find>RenderJson</find>
+      <find>http</find>
+      <find>errors</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="C:\Go" />
@@ -176,12 +166,14 @@
         <option value="$PROJECT_DIR$/app/repositories/user.go" />
         <option value="$PROJECT_DIR$/app/repositories/mysql/user.go" />
         <option value="$PROJECT_DIR$/app/main.go" />
-        <option value="$PROJECT_DIR$/app/handlers/user/get_one.go" />
         <option value="$PROJECT_DIR$/app/repositories/mysql/base.go" />
         <option value="$PROJECT_DIR$/app/connections/mysql.go" />
         <option value="$PROJECT_DIR$/app/models/user.go" />
         <option value="$PROJECT_DIR$/app/models/base.go" />
         <option value="$PROJECT_DIR$/app/cmd/http/main.go" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/handlers/user/get_one.go" />
+        <option value="$PROJECT_DIR$/app/handlers/response/api.go" />
       </list>
     </option>
   </component>
@@ -195,7 +187,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="374" />
     <option name="y" value="136" />
     <option name="width" value="1400" />
@@ -222,19 +214,6 @@
               <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
               <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="configs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -253,6 +232,20 @@
               <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
               <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,7 +258,26 @@
               <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
               <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="routers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="routers" type="462c0819:PsiDirectoryNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rest-api-by-golang" type="462c0819:PsiDirectoryNode" />
+              <item name="Docker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rest-api-by-golang" type="b2602c69:ProjectViewProjectNode" />
@@ -281,6 +293,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="true" />
@@ -289,7 +302,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/cmd/http/http.go" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RecentsManager">
@@ -313,21 +326,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager">
     <configuration name="go build app/" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="rest-api-by-golang" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="DIRECTORY" />
       <filePath value="$PROJECT_DIR$/" />
       <directory value="$PROJECT_DIR$/app" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="rest-api-by-golang" />
-      <working_directory value="D:\Go\rest-api-by-golang" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/app/main.go" />
-      <output_directory value="D:\Go\rest-api-by-golang" />
       <method v="2" />
     </configuration>
     <configuration name="go build user-service" type="GoApplicationRunConfiguration" factoryName="Go Application">
@@ -338,22 +343,30 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go_build_main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="rest-api-by-golang" />
+      <working_directory value="D:\Go\rest-api-by-golang" />
+      <kind value="FILE" />
+      <filePath value="D:\Go\rest-api-by-golang\app\cmd\http\http.go" />
+      <output_directory value="D:\Go\rest-api-by-golang" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go_build_main.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.24008575" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.18327974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -361,7 +374,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28617364" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24758843" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.14576635" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -407,20 +420,6 @@
     <entry file="file://$PROJECT_DIR$/app/handlers/user/user_get_all.go" />
     <entry file="file://$PROJECT_DIR$/app/handlers/user/user_update.go" />
     <entry file="file://$PROJECT_DIR$/app/handlers/user/user_get_one.go" />
-    <entry file="file://$PROJECT_DIR$/app/handlers/response/api.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/handlers/response/render.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="7" column="54" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/handlers/user/user_create.go" />
     <entry file="file://$PROJECT_DIR$/app/handlers/user/delete.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -434,13 +433,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/handlers/user/create.go">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routers/middleware/handler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routers/router.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -481,16 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/handlers/user/get_one.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="57" column="38" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="38" />
-          <folding>
-            <element signature="e#14#114#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,12 +541,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/repositories/mysql/user.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#15#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routers/middleware/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/handlers/response/render.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/handlers/response/api.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="e#18#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/handlers/user/get_one.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#14#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
