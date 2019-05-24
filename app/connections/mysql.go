@@ -7,11 +7,11 @@ import (
 )
 
 type MysqlConfig struct {
-	Host   string	`default:"localhost"`
-	Port   int		`default:"3306"`
-	DbName string	`default:"sample_go"`
-	User   string	`default:"root"`
-	Pass   string	`default:"123456"`
+	Host   string `default:"localhost"`
+	Port   int    `default:"3306"`
+	DbName string `default:"sample_go"`
+	User   string `default:"root"`
+	Pass   string `default:"123456"`
 }
 
 func (mC MysqlConfig) GetGormMysqlUrl() string {

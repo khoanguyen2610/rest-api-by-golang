@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 
 services:
     mysql-server:
@@ -10,19 +10,19 @@ services:
             - host
         env_file:
             - ./Docker/mysql-server/env/mysql-server.env
-        # volumes:
-        #     - './Docker/mysql-server/data:/var/lib/mysql'
+        volumes:
+            - './Docker/mysql-server/data:/var/lib/mysql'
         command: ["mysqld","--binlog_checksum=NONE","--gtid_mode=ON","--enforce_gtid_consistency=ON","--log_bin","--log_slave_updates=ON","--master_info_repository=TABLE","--relay_log_info_repository=TABLE","--transaction_write_set_extraction=XXHASH64","--user=mysql","--skip-host-cache","--skip-name-resolve","--default_authentication_plugin=mysql_native_password"]
-#    go-server:
-#        container_name: go-server
-#        build: ./Docker/go-server
-#        networks:
-#            - host
-#        ports:
-#            - 8080:8080
-#        depends_on:
-#            - mysql-server
-#        volumes:
-#            - ./app:/etc/go-app/app
+    go-server:
+        container_name: go-server
+        build: ./Docker/go-server
+        networks:
+            - host
+        ports:
+            - 8080:8080
+        depends_on:
+            - mysql-server
+        volumes:
+            - ./app:/go/user-service
 networks:
   host:

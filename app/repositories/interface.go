@@ -13,7 +13,7 @@ type BaseRepo interface {
 }
 
 type Searchable interface {
-	Search(val interface{}, f Filter) error
+	Search(val interface{}) error
 }
 
 type Updatable interface {

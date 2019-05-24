@@ -4,16 +4,15 @@ import (
 	"github.com/jinzhu/gorm"
 
 	"user-service/models"
-	"user-service/repositories"
 )
 
 type BaseRepo struct {
-	db  *gorm.DB
+	db *gorm.DB
 }
 
 func NewBaseRepo(db *gorm.DB) *BaseRepo {
 	return &BaseRepo{
-		db:  db,
+		db: db,
 	}
 }
 
@@ -33,17 +32,17 @@ func (r *BaseRepo) Create(m models.Model) error {
 	return r.db.Create(m).Error
 }
 
-func (r *BaseRepo) Search(val interface{}, f repositories.Filter) error {
+func (r *BaseRepo) Search(val interface{}) error {
 	q := r.db.Model(val)
-	for query, val := range f.GetWhere() {
-		q = q.Where(query, val...)
-	}
-
-	if f.GetLimit() > 0 {
-		q = q.Limit(f.GetLimit())
-	}
-
-	q = q.Offset(f.GetOffset())
+	//for query, val := range f.GetWhere() {
+	//	q = q.Where(query, val...)
+	//}
+	//
+	//if f.GetLimit() > 0 {
+	//	q = q.Limit(f.GetLimit())
+	//}
+	//
+	//q = q.Offset(f.GetOffset())
 
 	return q.Find(val).Error
 }

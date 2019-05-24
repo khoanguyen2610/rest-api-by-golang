@@ -4,8 +4,10 @@ RUN mkdir -p /etc/go-app/fresh && \
     mv freshRunner.conf /etc/go-app/fresh/freshRunner.conf
 
 
-WORKDIR /etc/go-app/app
-RUN go get github.com/gravityblast/fresh
+WORKDIR /go/user-service
+#RUN go get github.com/gravityblast/fresh
+RUN go get github.com/githubnemo/CompileDaemon
+RUN go mod download
 
-# ENTRYPOINT CompileDaemon -build="go build" -command="./app" -directory="/app"
-ENTRYPOINT fresh -c /etc/go-app/fresh/freshRunner.conf
+ENTRYPOINT CompileDaemon -build="go build /go/user-service/cmd/http" -command="./http" -directory="/go/user-service" -color="true"
+#ENTRYPOINT fresh -c /etc/go-app/fresh/freshRunner.conf

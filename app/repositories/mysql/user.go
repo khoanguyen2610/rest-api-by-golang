@@ -4,14 +4,14 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-type ProductRepo struct {
+type UserRepo struct {
 	BaseRepo
 }
 
-func NewProductRepo(db *gorm.DB) *ProductRepo {
-	return &ProductRepo{
+func NewUserRepo(db *gorm.DB) *UserRepo {
+	return &UserRepo{
 		BaseRepo{
-			db:  db,
+			db: db,
 		},
 	}
 }
