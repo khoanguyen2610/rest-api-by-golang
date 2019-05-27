@@ -3,10 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/gorilla/mux"
 	"log"
 	"net/http"
 	"strings"
+
+	"github.com/gorilla/mux"
 
 	"user-service/configs"
 	"user-service/connections"
@@ -35,17 +36,15 @@ func main() {
 	// init Routes
 	r := mux.NewRouter()
 	r.Use(middleware.Env(envFactory))
-	mount(r, "/api", routers.InitRouter())
+
+	// init Sub-Routes with prefix "/api"
+	r.PathPrefix("/api").Handler(
+		http.StripPrefix(
+			strings.TrimSuffix("/api", "/"),
+			routers.InitRouter(),
+		),
+	)
 
 	fmt.Println("Start listening on port :8080")
 	log.Fatal(http.ListenAndServe(":8080", r))
-}
-
-func mount(r *mux.Router, path string, handler http.Handler) {
-	r.PathPrefix(path).Handler(
-		http.StripPrefix(
-			strings.TrimSuffix(path, "/"),
-			handler,
-		),
-	)
 }

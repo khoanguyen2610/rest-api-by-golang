@@ -5,9 +5,7 @@ RUN mkdir -p /etc/go-app/fresh && \
 
 
 WORKDIR /go/user-service
-#RUN go get github.com/gravityblast/fresh
 RUN go get github.com/githubnemo/CompileDaemon
 RUN go mod download
 
 ENTRYPOINT CompileDaemon -build="go build /go/user-service/cmd/http" -command="./http" -directory="/go/user-service" -color="true"
-#ENTRYPOINT fresh -c /etc/go-app/fresh/freshRunner.conf

@@ -7,11 +7,12 @@ import (
 )
 
 type MysqlConfig struct {
-	Host   string `default:"localhost"`
-	Port   int    `default:"3306"`
-	DbName string `default:"sample_go"`
-	User   string `default:"root"`
-	Pass   string `default:"123456"`
+	Host   		string
+	Port   		int
+	DbName 		string
+	User   		string
+	Pass   		string
+	LogEnable 	bool
 }
 
 func (mC MysqlConfig) GetGormMysqlUrl() string {
@@ -30,6 +31,6 @@ func ConnectDB(mC MysqlConfig) *gorm.DB {
 	if err != nil {
 		panic(err)
 	}
-	db.LogMode(true)
+	db.LogMode(mC.LogEnable)
 	return db
 }
