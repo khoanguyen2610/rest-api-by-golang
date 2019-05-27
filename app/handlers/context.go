@@ -50,5 +50,26 @@ func (c *Context) DecodePayload(target interface{}) error {
 	return decoder.Decode(target)
 }
 
+// DecodePayload Decode payload to target
+func (c *Context) ConvertForm2Model(src interface{}, des interface{}) error {
+	source, err := json.Marshal(src)
+	if err != nil {
+		return err
+	}
+	return json.Unmarshal(source, &des)
+}
+
+// Validate Shortcuts to validate a struct
+func (c *Context) Validate(s interface{}) error {
+	return c.e.GetValidator().Struct(s)
+}
+
+// PanicOnError
+func (c *Context) PanicOnError(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
+
 // Func Handler function
 type HandlerFunc func(ctx Context) response.ApiResponse

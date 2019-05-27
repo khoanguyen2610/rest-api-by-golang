@@ -15,5 +15,6 @@ func InitRouter() http.Handler {
 	myRouter.HandleFunc("/user/{id}", middleware.MakeHandler(user.Get)).Methods("GET")
 	myRouter.HandleFunc("/user", middleware.MakeHandler(user.Create)).Methods("POST")
 	myRouter.HandleFunc("/user/{id}", middleware.MakeHandler(user.Update)).Methods("PUT")
+	myRouter.HandleFunc("/user/{id}", middleware.MakeHandler(user.Delete)).Methods("DELETE")
 	return myRouter
 }

@@ -5,9 +5,7 @@ import (
 	"time"
 )
 
-type Model interface {
-	GetId() int
-}
+type Model interface {}
 
 type BaseModel struct {
 	Id        int       `json:"id"`
@@ -15,10 +13,11 @@ type BaseModel struct {
 	UpdatedAt time.Time `json:"updatedAt"`
 }
 
-func (m *BaseModel) GetId() int {
-	return m.Id
-}
-
+/*
+|--------------------------------------------------------------------------
+| initialize create time
+|--------------------------------------------------------------------------
+*/
 func (m *BaseModel) BeforeCreate(scope *gorm.Scope) error {
 	now := time.Now()
 	now = now.Round(time.Second)
@@ -31,13 +30,14 @@ func (m *BaseModel) BeforeCreate(scope *gorm.Scope) error {
 	return nil
 }
 
+/*
+|--------------------------------------------------------------------------
+| initialize update time
+|--------------------------------------------------------------------------
+*/
 func (m *BaseModel) BeforeUpdate(scope *gorm.Scope) error {
 	now := time.Now()
 	now = now.Round(time.Second)
 	scope.SetColumn("UpdatedAt", now)
 	return nil
-}
-
-func (m *BaseModel) RevisionKey() int {
-	return m.Id
 }

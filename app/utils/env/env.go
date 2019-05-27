@@ -6,16 +6,18 @@ import (
 	"time"
 
 	"github.com/jinzhu/gorm"
+	"gopkg.in/go-playground/validator.v9"
 	"user-service/configs"
 )
 
 type Env struct {
-	conf *configs.AppConfig
-	db   *gorm.DB
-	ctx  context.Context
+	conf 	*configs.AppConfig
+	db   	*gorm.DB
+	ctx  	context.Context
+	v		*validator.Validate
 }
 
-func NewEnv(conf *configs.AppConfig, db *gorm.DB, ctx context.Context) *Env {
+func NewEnv(conf *configs.AppConfig, db *gorm.DB, ctx context.Context, v *validator.Validate) *Env {
 
 	if ctx == nil {
 		ctx = context.Background()
@@ -25,6 +27,7 @@ func NewEnv(conf *configs.AppConfig, db *gorm.DB, ctx context.Context) *Env {
 		conf: conf,
 		db:  db,
 		ctx:  ctx,
+		v: v,
 	}
 }
 
@@ -34,6 +37,10 @@ func (e *Env) GetAppConf() *configs.AppConfig {
 
 func (e *Env) GetDB() *gorm.DB {
 	return e.db
+}
+
+func (e *Env) GetValidator() *validator.Validate {
+	return e.v
 }
 
 // context.Context interface

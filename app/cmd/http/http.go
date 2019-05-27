@@ -14,6 +14,7 @@ import (
 	"user-service/routers"
 	"user-service/routers/middleware"
 	"user-service/utils/env"
+	"user-service/utils/validation"
 )
 
 func main() {
@@ -29,8 +30,12 @@ func main() {
 	}
 	db := connections.ConnectDB(mysqlConfig)
 
+	// init Validation
+	validator := validation.NewValidator()
+
+	// init App Env
 	envFactory := func(ctx context.Context) *env.Env {
-		return env.NewEnv(&appConf, db, ctx)
+		return env.NewEnv(&appConf, db, ctx, validator)
 	}
 
 	// init Routes

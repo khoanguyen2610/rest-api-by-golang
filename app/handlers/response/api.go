@@ -4,6 +4,8 @@ import (
 	"errors"
 	"github.com/jinzhu/gorm"
 	"net/http"
+
+	"user-service/utils/validation"
 )
 
 type ApiResponse struct {
@@ -38,6 +40,19 @@ func PartialContent(data interface{}) ApiResponse {
 // BadRequest 400-Bad Request
 func BadRequest(err error) ApiResponse {
 	return ErrorResponse(err, http.StatusBadRequest)
+}
+
+// ValidationError 422-Unprocessable Entity
+func ValidationError(err error) ApiResponse {
+	errMessages := validation.ParseValidationErr(err)
+	var response ApiResponse
+	response.Code = http.StatusUnprocessableEntity
+	response.Data = Error{
+		Message:    http.StatusText(http.StatusUnprocessableEntity),
+		StatusCode: http.StatusUnprocessableEntity,
+		Errors:     errMessages,
+	}
+	return response
 }
 
 // ErrorResponse Custom error response
