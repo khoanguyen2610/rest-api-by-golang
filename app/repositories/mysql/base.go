@@ -32,6 +32,10 @@ func (r *BaseRepo) Create(m models.Model) error {
 	return r.db.Create(m).Error
 }
 
+func (r *BaseRepo) Delete(m models.Model) error {
+	return r.db.Delete(m).Error
+}
+
 func (r *BaseRepo) Search(val interface{}) error {
 	q := r.db.Model(val)
 	//for query, val := range f.GetWhere() {

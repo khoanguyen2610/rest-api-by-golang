@@ -10,6 +10,7 @@ type BaseRepo interface {
 	Creatable
 	CanFindById
 	CanCreateOrUpdate
+	Delete(m models.Model) error
 }
 
 type Searchable interface {

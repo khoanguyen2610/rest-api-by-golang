@@ -5,7 +5,7 @@ import (
 	"user-service/handlers"
 	"user-service/handlers/response"
 	"user-service/models"
-	"user-service/repositories/mysql"
+	//"user-service/repositories/mysql"
 )
 
 func Delete(ctx handlers.Context) response.ApiResponse {
