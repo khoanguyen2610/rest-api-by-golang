@@ -2,6 +2,7 @@ package mysql
 
 import (
 	"github.com/jinzhu/gorm"
+	"user-service/repositories"
 
 	"user-service/models"
 )
@@ -36,17 +37,17 @@ func (r *BaseRepo) Delete(m models.Model) error {
 	return r.db.Delete(m).Error
 }
 
-func (r *BaseRepo) Search(val interface{}) error {
+func (r *BaseRepo) Search(val interface{}, f repositories.Filter) error {
 	q := r.db.Model(val)
-	//for query, val := range f.GetWhere() {
-	//	q = q.Where(query, val...)
-	//}
-	//
-	//if f.GetLimit() > 0 {
-	//	q = q.Limit(f.GetLimit())
-	//}
-	//
-	//q = q.Offset(f.GetOffset())
+	for query, val := range f.GetWhere() {
+		q = q.Where(query, val...)
+	}
+
+	if f.GetLimit() > 0 {
+		q = q.Limit(f.GetLimit())
+	}
+
+	q = q.Offset(f.GetOffset())
 
 	return q.Find(val).Error
 }

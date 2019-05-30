@@ -5,5 +5,5 @@ type Filter interface {
 	GetWhere() Where
 	GetLimit() int
 	GetOffset() int
-	GetOrder(allowedFields map[string]string, defaultSort string) string
+	//GetOrder(allowedFields map[string]string, defaultSort string) string
 }

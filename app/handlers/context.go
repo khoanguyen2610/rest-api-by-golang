@@ -3,15 +3,17 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
-	"user-service/repositories"
-	"user-service/repositories/mysql"
-	"user-service/utils/env"
 
+	"github.com/gorilla/schema"
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
 
 	"user-service/handlers/response"
+	"user-service/repositories"
+	"user-service/repositories/mysql"
+	"user-service/utils/env"
 )
+var schemaDecoder = schema.NewDecoder()
 
 type Context struct {
 	e *env.Env
@@ -42,6 +44,11 @@ func (c *Context) BaseRepo() repositories.BaseRepo {
 func (c *Context) URLParam(key string) string {
 	vars := mux.Vars(c.r)
 	return vars[key]
+}
+
+// DecodeURLParam Parses url params to target
+func (c *Context) DecodeURLParam(target interface{}) error {
+	return schemaDecoder.Decode(target, c.r.URL.Query())
 }
 
 // DecodePayload Decode payload to target
